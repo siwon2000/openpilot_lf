@@ -88,6 +88,7 @@ class CAR(StrEnum):
   SANTA_FE_PHEV_2022 = "HYUNDAI SANTA FE PlUG-IN HYBRID 2022"
   SONATA = "HYUNDAI SONATA 2020"
   SONATA_LF = "HYUNDAI SONATA 2019"
+  SONATA_LF_2016 = "HYUNDAI SONATA 2016"
   TUCSON = "HYUNDAI TUCSON 2019"
   PALISADE = "HYUNDAI PALISADE 2020"
   VELOSTER = "HYUNDAI VELOSTER 2019"
@@ -212,6 +213,7 @@ CAR_INFO: Dict[str, Optional[Union[HyundaiCarInfo, List[HyundaiCarInfo]]]] = {
   CAR.SONATA: HyundaiCarInfo("Hyundai Sonata 2020-23", "All", video_link="https://www.youtube.com/watch?v=ix63r9kE3Fw",
                              car_parts=CarParts.common([CarHarness.hyundai_a])),
   CAR.SONATA_LF: HyundaiCarInfo("Hyundai Sonata 2018-19", car_parts=CarParts.common([CarHarness.hyundai_e])),
+  CAR.SONATA_LF_2016: HyundaiCarInfo("Hyundai Sonata 2018-19", car_parts=CarParts.common([CarHarness.hyundai_e])),
   CAR.TUCSON: [
     HyundaiCarInfo("Hyundai Tucson 2021", min_enable_speed=19 * CV.MPH_TO_MS, car_parts=CarParts.common([CarHarness.hyundai_l])),
     HyundaiCarInfo("Hyundai Tucson Diesel 2019", car_parts=CarParts.common([CarHarness.hyundai_l])),
@@ -238,6 +240,7 @@ CAR_INFO: Dict[str, Optional[Union[HyundaiCarInfo, List[HyundaiCarInfo]]]] = {
   CAR.SANTA_CRUZ_1ST_GEN: HyundaiCarInfo("Hyundai Santa Cruz 2022-23", car_parts=CarParts.common([CarHarness.hyundai_n])),
   CAR.CUSTIN_1ST_GEN: HyundaiCarInfo("Hyundai Custin 2023", "All", car_parts=CarParts.common([CarHarness.hyundai_k])),
   CAR.AVANTE_AD: HyundaiCarInfo("Hyundai Avante", video_link="https://youtu.be/_EdYQtV52-c"),
+  CAR.SONATA_LF_2016: HyundaiCarInfo("Hyundai SONATA_LF_2016", video_link="https://youtu.be/_EdYQtV52-c"),
   CAR.AVANTE_CN7: HyundaiCarInfo("Hyundai Avante 2021", video_link="https://youtu.be/_EdYQtV52-c"),
   CAR.AVANTE_HEV_CN7: HyundaiCarInfo("Hyundai Avante Hybrid 2021"),
   CAR.I30_PD: HyundaiCarInfo("Hyundai I30", "All"),
@@ -360,6 +363,9 @@ FINGERPRINTS = {
     {67: 8, 68: 8, 127: 8, 304: 8, 320: 8, 339: 8, 356: 4, 544: 8, 546: 8, 549: 8, 550: 8, 576: 8, 593: 8, 608: 8, 688: 6, 809: 8, 832: 8, 854: 8, 865: 8, 870: 7, 871: 8, 872: 8, 897: 8, 902: 8, 903: 8, 905: 8, 908: 8, 909: 8, 912: 7, 913: 8, 916: 8, 1040: 8, 1042: 8, 1056: 8, 1057: 8, 1078: 4, 1089: 5, 1096: 8, 1107: 5, 1108: 8, 1114: 8, 1136: 8, 1145: 8, 1151: 8, 1155: 8, 1156: 8, 1157: 4, 1162: 8, 1164: 8, 1168: 8, 1170: 8, 1173: 8, 1180: 8, 1183: 8, 1184: 8, 1186: 2, 1191: 2, 1193: 8, 1210: 8, 1225: 8, 1227: 8, 1265: 4, 1268: 8, 1280: 8, 1287: 4, 1290: 8, 1292: 8, 1294: 8, 1312: 8, 1322: 8, 1330: 8, 1339: 8, 1342: 6, 1343: 8, 1345: 8, 1348: 8, 1363: 8, 1369: 8, 1371: 8, 1378: 8, 1379: 8, 1384: 8, 1394: 8, 1407: 8, 1419: 8, 1427: 6, 1446: 8, 1456: 4, 1460: 8, 1470: 8, 1485: 8, 1504: 3, 1988: 8, 1996: 8, 2000: 8, 2004: 8, 2008: 8, 2012: 8, 2015: 8},
   ],
   CAR.SONATA_LF: [
+    {66: 8, 67: 8, 68: 8, 127: 8, 273: 8, 274: 8, 275: 8, 339: 8, 356: 4, 399: 8, 447: 8, 512: 6, 544: 8, 593: 8, 608: 8, 688: 5, 790: 8, 809: 8, 832: 8, 884: 8, 897: 8, 899: 8, 902: 8, 903: 6, 916: 8, 1040: 8, 1056: 8, 1057: 8, 1078: 4, 1151: 6, 1168: 7, 1170: 8, 1253: 8, 1254: 8, 1255: 8, 1265: 4, 1280: 1, 1287: 4, 1290: 8, 1292: 8, 1294: 8, 1312: 8, 1314: 8, 1322: 8, 1331: 8, 1332: 8, 1333: 8, 1342: 6, 1345: 8, 1348: 8, 1349: 8, 1351: 8, 1353: 8, 1363: 8, 1365: 8, 1366: 8, 1367: 8, 1369: 8, 1397: 8, 1407: 8, 1415: 8, 1419: 8, 1425: 2, 1427: 6, 1440: 8, 1456: 4, 1470: 8, 1472: 8, 1486: 8, 1487: 8, 1491: 8, 1530: 8, 1532: 5, 2000: 8, 2001: 8, 2004: 8, 2005: 8, 2008: 8, 2009: 8, 2012: 8, 2013: 8, 2014: 8, 2016: 8, 2017: 8, 2024: 8, 2025: 8},
+  ],
+  CAR.SONATA_LF_2016: [
     {66: 8, 67: 8, 68: 8, 127: 8, 273: 8, 274: 8, 275: 8, 339: 8, 356: 4, 399: 8, 447: 8, 512: 6, 544: 8, 593: 8, 608: 8, 688: 5, 790: 8, 809: 8, 832: 8, 884: 8, 897: 8, 899: 8, 902: 8, 903: 6, 916: 8, 1040: 8, 1056: 8, 1057: 8, 1078: 4, 1151: 6, 1168: 7, 1170: 8, 1253: 8, 1254: 8, 1255: 8, 1265: 4, 1280: 1, 1287: 4, 1290: 8, 1292: 8, 1294: 8, 1312: 8, 1314: 8, 1322: 8, 1331: 8, 1332: 8, 1333: 8, 1342: 6, 1345: 8, 1348: 8, 1349: 8, 1351: 8, 1353: 8, 1363: 8, 1365: 8, 1366: 8, 1367: 8, 1369: 8, 1397: 8, 1407: 8, 1415: 8, 1419: 8, 1425: 2, 1427: 6, 1440: 8, 1456: 4, 1470: 8, 1472: 8, 1486: 8, 1487: 8, 1491: 8, 1530: 8, 1532: 5, 2000: 8, 2001: 8, 2004: 8, 2005: 8, 2008: 8, 2009: 8, 2012: 8, 2013: 8, 2014: 8, 2016: 8, 2017: 8, 2024: 8, 2025: 8},
   ],
   CAR.KIA_SORENTO: [{
@@ -2125,7 +2131,7 @@ CAN_GEARS = {
   # which message has the gear. hybrid and EV use ELECT_GEAR
   "use_cluster_gears": {CAR.ELANTRA, CAR.KONA,
                         CAR.AVANTE_AD, CAR.I30_PD, CAR.K7_YG, CAR.GRANDEUR_IG, CAR.GRANDEUR_FL_IG},
-  "use_tcu_gears": {CAR.KIA_OPTIMA_G4, CAR.KIA_OPTIMA_G4_FL, CAR.SONATA_LF, CAR.VELOSTER, CAR.TUCSON,
+  "use_tcu_gears": {CAR.KIA_OPTIMA_G4, CAR.KIA_OPTIMA_G4_FL, CAR.SONATA_LF, CAR.SONATA_LF_2016, CAR.VELOSTER, CAR.TUCSON,
                     CAR.K5_JF, CAR.KIA_STINGER},
 }
 
@@ -2241,6 +2247,7 @@ DBC = {
   CAR.GENESIS_DH: dbc_dict('hyundai_kia_generic', RadarTrack),
   CAR.GENESIS_EQ900_HI: dbc_dict('hyundai_kia_generic', RadarTrack),
   CAR.AVANTE_AD: dbc_dict('hyundai_kia_generic', RadarTrack),
+  CAR.SONATA_LF_2016: dbc_dict('hyundai_kia_generic', RadarTrack),
   CAR.AVANTE_CN7: dbc_dict('hyundai_kia_generic', RadarTrack),
   CAR.AVANTE_HEV_CN7: dbc_dict('hyundai_kia_generic', RadarTrack),
   CAR.I30_PD: dbc_dict('hyundai_kia_generic', RadarTrack),

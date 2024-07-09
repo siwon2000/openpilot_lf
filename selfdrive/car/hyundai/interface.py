@@ -117,6 +117,10 @@ class CarInterface(CarInterfaceBase):
       ret.mass = 1536.
       ret.wheelbase = 2.804
       ret.steerRatio = 13.27 * 1.15   # 15% higher at the center seems reasonable
+    elif candidate == CAR.SONATA_LF_2016:
+      ret.mass = 1536.
+      ret.wheelbase = 2.804
+      ret.steerRatio = 13.27 * 1.15   # 15% higher at the center seems reasonable      
     elif candidate == CAR.PALISADE:
       ret.mass = 1999.
       ret.wheelbase = 2.90
